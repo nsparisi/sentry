@@ -94,7 +94,6 @@ let clickCheckBox = function (event) {
     });
 }
 
-addCheckBoxes();
-//dumb1();
-
 console.log("content script");
+addCheckBoxes();
+// dumb1();

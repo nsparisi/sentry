@@ -3,30 +3,20 @@
     "name": "Sentry",
     "description": "This extension is a Sentry.",
     "version": "0.1",
+    "icons": {
+        "16": "images/sentry-16.png",
+        "32": "images/sentry-32.png",
+        "48": "images/sentry-48.png",
+        "128": "images/sentry-128.png"
+    },
     "content_scripts": [
       {
         "matches": ["https://puzzlehunt.research.microsoft.com/*/Puzzles.aspx"],
         "js": ["sentry_content_script.js"]
       }
     ],
-    "page_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-          "16": "images/sentry-16.png",
-          "32": "images/sentry-32.png",
-          "48": "images/sentry-48.png",
-          "128": "images/sentry-128.png"
-        }
-    },
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": false
-    },
     "permissions": [
         "activeTab",
-        "storage",
-        "declarativeContent"
+        "storage"
     ]
 }
